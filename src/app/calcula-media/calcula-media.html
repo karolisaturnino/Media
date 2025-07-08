@@ -1,0 +1,31 @@
+<h1>MÉDIA DO IFRN</h1>
+<form>   
+        <div>
+        <label for="nota1">Bim 1:</label>
+        <input type="number" id="b1" #b1>
+        </div>
+        <div>
+        <label for="nota2">Bim 2:</label>
+        <input type="number" id="b2"  #b2 >
+        </div>
+        <div>
+        <label for="nota3">Bim 3:</label>
+        <input type="number" id="b3"  #b3>
+        </div>
+        <div>
+        <label for="nota3">Bim 4:</label>
+        <input type="number" id="b4"  #b4>
+        </div>
+        
+        <div>
+            <input type="button" value="Calcular" (click)="calularMediaParcial(
+                +b1.value, +b2.value, +b3.value, +b4.value)">
+        </div>
+    </form>
+    <div>
+        Situação: {{situacao}}
+    </div>
+    <div *ngIf="mediaparcial !== undefined">
+        <p>Média parcial = {{mediaparcial}}</p>
+    </div>
+

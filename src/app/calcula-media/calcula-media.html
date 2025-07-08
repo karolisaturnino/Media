@@ -18,12 +18,12 @@
         </div>
         
         <div>
-            <input type="button" value="Calcular" (click)="calularMediaParcial(
+            <input type="button" value="Calcular" (click)="calcularMediaParcial(
                 +b1.value, +b2.value, +b3.value, +b4.value)">
         </div>
     </form>
     <div>
-        Situação: {{situacao}}
+        Situação: {{this.boletim.obterSituacao()}}
     </div>
     <div *ngIf="mediaparcial !== undefined">
         <p>Média parcial = {{mediaparcial}}</p>
